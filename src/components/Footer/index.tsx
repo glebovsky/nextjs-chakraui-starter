@@ -6,7 +6,7 @@ import { Link } from "@chakra-ui/next-js";
 const Footer = () => {
   return (
     <Box as="footer" bg="gray.100" p={4}>
-      <Container maxW="container.lg">
+      <Container>
         <Box as="nav">
           <ul>
             <li>
