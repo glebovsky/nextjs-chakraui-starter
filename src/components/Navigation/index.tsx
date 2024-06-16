@@ -1,12 +1,10 @@
 'use client'
 
 import { Link } from '@chakra-ui/next-js'
-import { Text, Stack, Button, useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react'
+import { Stack, Button, useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react'
 import Section from '@/components/Section'
 import { FiMoon, FiSun } from 'react-icons/fi'
-import Logo from '@/assets/logo.svg'
-
-import { globalMetadataConfig } from '@/app/metadata'
+import Logo from '@/components/Logo'
 
 type TNavigationProps = {
   showLogoTitle?: boolean
@@ -14,37 +12,12 @@ type TNavigationProps = {
 
 const Navigation = ({ showLogoTitle = false }: TNavigationProps) => {
   const { colorMode, toggleColorMode } = useColorMode()
-  const bg = useColorModeValue('gray.50', 'gray.800')
-  const logoColor = useColorModeValue('black', 'white')
+  const bg = useColorModeValue('gray.50', 'gray.900')
 
   return (
     <Section py="4" bg={bg}>
       <Stack direction="row" align="center" justify="space-between">
-        <Link
-          href="/"
-          aria-label="Home"
-          display="flex"
-          gap="4"
-          alignItems="center"
-          _hover={{
-            textDecoration: 'none',
-          }}
-          sx={{
-            path: {
-              fill: logoColor,
-            },
-            'path:last-child': {
-              fill: 'orange.300',
-            },
-          }}
-        >
-          <Logo width="2rem" />
-          {showLogoTitle && (
-            <Text as="span" fontWeight="semibold">
-              {globalMetadataConfig.title}
-            </Text>
-          )}
-        </Link>
+        <Logo showTitle={showLogoTitle} />
         <Stack as="nav" direction="row" align="center" gap="6">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
