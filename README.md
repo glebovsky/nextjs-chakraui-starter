@@ -23,10 +23,11 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 ## This starter includes:
 
-- Next.js (React, Typescript, Eslint, Prettier)
+- [Next.js](https://nextjs.org/docs) (React, Typescript, Eslint, Prettier)
   - [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-- Chakra UI (+Icons)
-- Framer Motion
+- [Chakra UI](https://v2.chakra-ui.com/getting-started) (+Icons)
+- [Framer Motion](https://www.framer.com/motion/examples/)
+- [React Icons](https://react-icons.github.io/react-icons/)
 
 and some basic components to get started.
 

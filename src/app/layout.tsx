@@ -1,11 +1,11 @@
-import { globalMetadata } from "@/app/metadata";
-import Providers from "@/app/providers";
+import { globalMetadata } from '@/app/metadata'
+import Providers from '@/app/providers'
 
-import { Box, Container } from "@chakra-ui/react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
+import { Box } from '@chakra-ui/react'
+import Navigation from '@/components/Navigation'
+import Footer from '@/components/Footer'
 
-export const metadata = globalMetadata;
+export const metadata = globalMetadata
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -13,15 +13,13 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="en" suppressHydrationWarning={true}>
       <body suppressHydrationWarning={true}>
         <Providers>
-          <Navigation />
-          <Box as="main">
-            <Container>{children}</Container>
-          </Box>
+          <Navigation showLogoTitle />
+          <Box as="main">{children}</Box>
           <Footer />
         </Providers>
       </body>
     </html>
-  );
-};
+  )
+}
 
-export default RootLayout;
+export default RootLayout

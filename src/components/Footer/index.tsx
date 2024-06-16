@@ -1,25 +1,18 @@
-"use client";
+'use client'
 
-import { Container, Box } from "@chakra-ui/react";
-import { Link } from "@chakra-ui/next-js";
+import { Link } from '@chakra-ui/next-js'
+import { Stack } from '@chakra-ui/react'
+import Section from '@/components/Section'
 
 const Footer = () => {
   return (
-    <Box as="footer" bg="gray.100" p={4}>
-      <Container>
-        <Box as="nav">
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-          </ul>
-        </Box>
-      </Container>
-    </Box>
-  );
-};
+    <Section as="footer" py="4">
+      <Stack direction="row" as="nav">
+        <Link href="/">Home</Link>
+        <Link href="/about">About</Link>
+      </Stack>
+    </Section>
+  )
+}
 
-export default Footer;
+export default Footer
