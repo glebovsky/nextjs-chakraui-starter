@@ -13,7 +13,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html lang="en" suppressHydrationWarning={true}>
       <body suppressHydrationWarning={true}>
         <Providers>
-          <Navigation showLogoTitle />
+          <Navigation />
           <Box as="main">{children}</Box>
           <Footer />
         </Providers>

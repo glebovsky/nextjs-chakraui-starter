@@ -10,7 +10,7 @@ type TLogoProps = {
   showTitle?: boolean
 }
 
-const Logo = ({ showTitle = true }: TLogoProps) => {
+const Logo = ({ showTitle = false }: TLogoProps) => {
   const logoColor = useColorModeValue('black', 'white')
 
   return (
