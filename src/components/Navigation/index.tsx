@@ -1,9 +1,8 @@
 'use client'
 
 import { Link } from '@chakra-ui/next-js'
-import { Stack, Button, useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react'
+import { Stack, Button, useColorModeValue } from '@chakra-ui/react'
 import Section from '@/components/Section'
-import { FiMoon, FiSun } from 'react-icons/fi'
 import Logo from '@/components/Logo'
 
 type TNavigationProps = {
@@ -11,7 +10,6 @@ type TNavigationProps = {
 }
 
 const Navigation = ({ showLogoTitle = false }: TNavigationProps) => {
-  const { colorMode, toggleColorMode } = useColorMode()
   const bg = useColorModeValue('gray.50', 'gray.900')
 
   return (
@@ -21,14 +19,9 @@ const Navigation = ({ showLogoTitle = false }: TNavigationProps) => {
         <Stack as="nav" direction="row" align="center" gap="6">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
-          <Button as={Link} href="/contact" colorScheme="orange">
+          <Button as={Link} href="/contact" colorScheme="gray">
             Contact
           </Button>
-          <IconButton
-            aria-label="Toggle color mode"
-            icon={colorMode === 'light' ? <FiMoon /> : <FiSun />}
-            onClick={toggleColorMode}
-          />
         </Stack>
       </Stack>
     </Section>

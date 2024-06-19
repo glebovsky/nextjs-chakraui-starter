@@ -17,7 +17,7 @@ const Logo = ({ showTitle = false }: TLogoProps) => {
     <Link
       href="/"
       aria-label="Home"
-      display="flex"
+      display="inline-flex"
       gap="4"
       alignItems="center"
       _hover={{
@@ -27,12 +27,13 @@ const Logo = ({ showTitle = false }: TLogoProps) => {
         path: {
           fill: logoColor,
         },
+        // Just for fun, let's change the color of the last path
         'path:last-child': {
           fill: 'orange.300',
         },
       }}
     >
-      <LogoSvg width="2rem" />
+      <LogoSvg width="2rem" style={{ flexShrink: 0 }} />
       {showTitle && (
         <Text as="span" fontWeight="semibold">
           {globalMetadataConfig.title}
