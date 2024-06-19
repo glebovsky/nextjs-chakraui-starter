@@ -16,7 +16,7 @@ type TSectionProps = {
 
 const Section = ({ children, directChildren, containerProps, ...props }: TSectionProps & BoxProps) => {
   return (
-    <Box py={{ base: 6, md: 12 }} {...props}>
+    <Box py={{ base: 14, md: 24 }} {...props}>
       <Container {...containerProps}>{children}</Container>
       {directChildren}
     </Box>

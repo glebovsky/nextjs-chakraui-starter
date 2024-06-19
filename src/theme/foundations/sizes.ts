@@ -1,3 +1,7 @@
+/**
+ * The `sizes` key allows you to customize the global sizing of components you build for your project.
+ * By default these sizes value can be referenced by the `width`, `height`, and `maxWidth`, `minWidth`, `maxHeight`, `minHeight` styles.
+ */
 export const sizes = {
   max: 'max-content',
   min: 'min-content',
