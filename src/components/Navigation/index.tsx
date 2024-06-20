@@ -1,9 +1,10 @@
 'use client'
 
 import { Link } from '@chakra-ui/next-js'
-import { Box, Grid, Flex, Stack, Button, useColorModeValue, useDisclosure } from '@chakra-ui/react'
+import { Flex, Stack, Button, useColorModeValue, useDisclosure } from '@chakra-ui/react'
 import Section from '@/components/Section'
 import Logo from '@/components/Logo'
+import MobileMenuButton from '@/components/Navigation/MobileMenuButton'
 
 type TNavigationProps = {
   showLogoTitle?: boolean
@@ -33,14 +34,6 @@ const Navigation = ({ showLogoTitle = false }: TNavigationProps) => {
         </Stack>
       </Stack>
     </Section>
-  )
-}
-
-const MobileMenuButton = ({ isOpen, onToggle }: { isOpen: boolean; onToggle: () => void }) => {
-  return (
-    <Button display={{ base: 'inline-flex', md: 'none' }} variant="ghost" colorScheme="gray" onClick={onToggle}>
-      {isOpen ? 'Hide' : 'Show'}
-    </Button>
   )
 }
 

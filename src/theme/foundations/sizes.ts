@@ -3,6 +3,10 @@
  * By default these sizes value can be referenced by the `width`, `height`, and `maxWidth`, `minWidth`, `maxHeight`, `minHeight` styles.
  */
 export const sizes = {
+  /**
+   * The sizes key also includes `space` values, which are used to define margin and padding values.
+   * Can be found in `src/theme/foundations/spacing.ts` file
+   */
   max: 'max-content',
   min: 'min-content',
   full: '100%',
