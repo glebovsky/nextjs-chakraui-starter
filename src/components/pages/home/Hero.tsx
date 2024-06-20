@@ -4,7 +4,7 @@ import Link from '@/components/Link'
 
 const HomeHero = () => {
   return (
-    <Section>
+    <Section minH="90vh">
       <Heading
         as="h2"
         size={{ base: 'xs', md: 'sm' }}

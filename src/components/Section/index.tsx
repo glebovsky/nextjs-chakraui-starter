@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, BoxProps, Container } from '@chakra-ui/react'
+import { Flex, BoxProps, Container } from '@chakra-ui/react'
 
 type TSectionProps = {
   children: React.ReactNode
@@ -16,10 +16,10 @@ type TSectionProps = {
 
 const Section = ({ children, directChildren, containerProps, ...props }: TSectionProps & BoxProps) => {
   return (
-    <Box py={{ base: 14, md: 24 }} {...props}>
+    <Flex dir="column" align="center" py={{ base: 14, md: 24 }} {...props}>
       <Container {...containerProps}>{children}</Container>
       {directChildren}
-    </Box>
+    </Flex>
   )
 }
 
