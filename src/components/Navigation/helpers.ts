@@ -1,34 +1,34 @@
 import { Variants } from 'framer-motion'
 
-export const mobileMenuButtonLine1Variants: Variants = {
-  open: {
-    y: 6,
-    rotate: 45,
+export const mobileMenuButtonLineVariants: Record<string, Variants> = {
+  lineOne: {
+    open: {
+      y: 6,
+      rotate: 45,
+    },
+    closed: {
+      y: 0,
+      rotate: 0,
+    },
   },
-  closed: {
-    y: 0,
-    rotate: 0,
+  lineTwo: {
+    open: {
+      x: -5,
+      opacity: 0,
+    },
+    closed: {
+      x: 0,
+      opacity: 1,
+    },
   },
-}
-
-export const mobileMenuButtonLine2Variants: Variants = {
-  open: {
-    x: -5,
-    opacity: 0,
-  },
-  closed: {
-    x: 0,
-    opacity: 1,
-  },
-}
-
-export const mobileMenuButtonLine3Variants: Variants = {
-  open: {
-    y: -6,
-    rotate: -45,
-  },
-  closed: {
-    y: 0,
-    rotate: 0,
+  lineThree: {
+    open: {
+      y: -6,
+      rotate: -45,
+    },
+    closed: {
+      y: 0,
+      rotate: 0,
+    },
   },
 }

@@ -3,11 +3,7 @@
 import { motion } from 'framer-motion'
 import { Box, Button } from '@chakra-ui/react'
 
-import {
-  mobileMenuButtonLine1Variants,
-  mobileMenuButtonLine2Variants,
-  mobileMenuButtonLine3Variants,
-} from '@/components/Navigation/helpers'
+import { mobileMenuButtonLineVariants } from '@/components/Navigation/helpers'
 
 const MobileMenuButtonLineStyles = {
   as: motion.span,
@@ -29,23 +25,17 @@ const MobileMenuButton = ({ isOpen, onToggle }: { isOpen: boolean; onToggle: () 
       gap="1"
       flexDir="column"
       alignItems="flex-start"
+      overflow="hidden"
     >
-      <Box
-        variants={mobileMenuButtonLine1Variants}
-        animate={isOpen ? 'open' : 'close'}
-        {...MobileMenuButtonLineStyles}
-      />
-      <Box
-        variants={mobileMenuButtonLine2Variants}
-        animate={isOpen ? 'open' : 'close'}
-        {...MobileMenuButtonLineStyles}
-        w="3"
-      />
-      <Box
-        variants={mobileMenuButtonLine3Variants}
-        animate={isOpen ? 'open' : 'close'}
-        {...MobileMenuButtonLineStyles}
-      />
+      {Object.keys(mobileMenuButtonLineVariants).map((line, index) => (
+        <Box
+          key={index}
+          variants={mobileMenuButtonLineVariants[line]}
+          animate={isOpen ? 'open' : 'close'}
+          {...MobileMenuButtonLineStyles}
+          w={line === 'lineTwo' ? '3' : '4'}
+        />
+      ))}
     </Button>
   )
 }
