@@ -2,9 +2,9 @@
 
 import { Link } from '@chakra-ui/next-js'
 import { Stack, useColorModeValue, useColorMode, IconButton } from '@chakra-ui/react'
-import Section from '@/components/Section'
+import Section from '@/components/molecules/Section'
 import { FiMoon, FiSun } from 'react-icons/fi'
-import Logo from '@/components/Logo'
+import Logo from '@/components/molecules/Logo'
 
 const Footer = () => {
   const { colorMode, toggleColorMode } = useColorMode()

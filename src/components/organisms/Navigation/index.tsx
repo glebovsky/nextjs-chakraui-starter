@@ -2,9 +2,9 @@
 
 import { Link } from '@chakra-ui/next-js'
 import { Flex, Stack, Button, useColorModeValue, useDisclosure } from '@chakra-ui/react'
-import Section from '@/components/Section'
-import Logo from '@/components/Logo'
-import MobileMenuButton from '@/components/Navigation/MobileMenuButton'
+import Section from '@/components/molecules/Section'
+import Logo from '@/components/molecules/Logo'
+import MobileMenuButton from '@/components/organisms/Navigation/MobileMenuButton'
 
 type TNavigationProps = {
   showLogoTitle?: boolean

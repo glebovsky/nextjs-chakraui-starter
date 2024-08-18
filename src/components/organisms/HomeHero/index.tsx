@@ -1,6 +1,6 @@
 import { Heading, Text } from '@chakra-ui/react'
-import Section from '@/components/Section'
-import Link from '@/components/Link'
+import Section from '@/components/molecules/Section'
+import Link from '@/components/atoms/Link'
 
 const HomeHero = () => {
   return (

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import HomeHero from '@/components/pages/home/Hero'
+import HomeHero from '@/components/organisms/HomeHero'
 
 export const metadata: Metadata = {
   title: 'Welcome',

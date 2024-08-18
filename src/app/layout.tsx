@@ -2,8 +2,8 @@ import { globalMetadata } from '@/app/metadata'
 import Providers from '@/app/providers'
 
 import { Box } from '@chakra-ui/react'
-import Navigation from '@/components/Navigation'
-import Footer from '@/components/Footer'
+import Navigation from '@/components/organisms/Navigation'
+import Footer from '@/components/organisms/Footer'
 
 export const metadata = globalMetadata
 
