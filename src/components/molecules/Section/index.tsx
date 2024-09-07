@@ -1,5 +1,6 @@
 'use client'
 
+import { MotionProps } from 'framer-motion'
 import { Flex, BoxProps, Container } from '@chakra-ui/react'
 
 type TSectionProps = {
@@ -14,7 +15,7 @@ type TSectionProps = {
   containerProps?: BoxProps
 }
 
-const Section = ({ children, directChildren, containerProps, ...props }: TSectionProps & BoxProps) => {
+const Section = ({ children, directChildren, containerProps, ...props }: TSectionProps & BoxProps & MotionProps) => {
   return (
     <Flex dir="column" align="center" py={{ base: 14, md: 24 }} {...props}>
       <Container {...containerProps}>{children}</Container>
