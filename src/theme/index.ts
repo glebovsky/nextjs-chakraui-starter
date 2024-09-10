@@ -2,8 +2,9 @@ import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
 
 // Style system
 import { styles } from './styles'
-import { colors } from './foundations/colors'
+import { breakpoints } from './foundations/breakpoints'
 import { fonts } from './foundations/fonts'
+import { colors } from './foundations/colors'
 import { sizes, typographySizes, borderRadius } from './foundations/sizes'
 import { spacing } from './foundations/spacing'
 import { textStyles } from './foundations/textStyles'
@@ -22,6 +23,7 @@ const config: ThemeConfig = {
 const theme = extendTheme({
   config,
   styles,
+  breakpoints,
   fonts,
   colors,
   sizes,

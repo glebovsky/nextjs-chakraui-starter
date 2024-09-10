@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { Box, Button } from '@chakra-ui/react'
 
-import { mobileMenuButtonLineVariants } from '@/components/organisms/Navigation/helpers'
+import { mobileMenuButtonLineVariants } from '@/components/organisms/Navigation/animationVariants'
 
 const MobileMenuButtonLineStyles = {
   as: motion.span,
